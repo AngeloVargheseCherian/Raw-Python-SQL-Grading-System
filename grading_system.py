@@ -94,28 +94,18 @@ def delete():
     print(mycursor.rowcount, "record(s) deleted")
 
 def grading(m):
-    if m >= 91:
+    if m >= 90:
         a='A1'
-    elif m >= 81:
+    elif m >= 80:
         a='A2'
-    elif m >= 71:
+    elif m >= 70:
         a='B1'
-    elif m >= 61:
+    elif m >= 60:
         a='B2'
-    elif m >= 51:
+    elif m >= 50:
         a='C1'
-    elif m >= 41:
-        a='C2'
-    elif m >= 31:
-        a='D1'
-    elif m >= 21:
-        a='D2'
-    elif m >= 11:
-        a='E1'
-    elif m >= 1:
-        a='E2'
     else:
-        a="NO GRADE"
+        a="F"
     return a
 
 #Main Program
@@ -125,17 +115,12 @@ while True:
         print('WELCOME TO GRADING APPLICATION!')
         print('''THIS IS HOW THE GRADING IS DONE:
                 *THE MARKS HAVE TO BE GIVEN OUT OF HUNDRED
-                *IF MARKS ARE ABOVE 91, A1 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 81, A2 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 71, B1 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 61, B2 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 51, C1 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 41, C2 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 31, D1 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 21, D2 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 11, E1 GRADE IS AWARDED
-                *IF MARKS ARE ABOVE 1, E2 GRADE IS AWARDED
-                *IF MARK IS 0, NO GRADE IS AWARDED''')
+                *IF MARKS ARE EQUAL TO OR ABOVE 90, A1 GRADE IS AWARDED
+                *IF MARKS ARE EQUAL TO OR ABOVE 80, A2 GRADE IS AWARDED
+                *IF MARKS ARE EQUAL TO OR ABOVE 70, B1 GRADE IS AWARDED
+                *IF MARKS ARE EQUAL TO OR ABOVE 60, B2 GRADE IS AWARDED
+                *IF MARKS ARE EQUAL TO OR ABOVE 50, C1 GRADE IS AWARDED
+                *IF MARKS ARE LESS THAN 50, F GRADE IS AWARDED''')
     else:
         print('SORRY, PASSSWORD IS WRONG. TRY AGAIN!')
         continue
